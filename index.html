@@ -10,60 +10,103 @@
       font-family: 'Helvetica Neue', Arial, sans-serif;
       background: #f0f0f0;
       color: #333;
-      text-align: center;
     }
     header {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: #fff;
-      padding: 20px 10px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: relative;
     }
-    .top-nav {
+    /* Hamburger батырма стилі */
+    .hamburger {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 0;
-      overflow-x: auto;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
     }
-    .top-nav a {
-      flex: 0 0 auto;
+    .hamburger div {
+      width: 100%;
+      height: 4px;
+      background: #fff;
+    }
+    /* Dropdown мәзір стилі */
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      background: #1e3c72;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      width: 200px;
+      z-index: 1000;
+    }
+    .menu a {
       padding: 10px 15px;
       color: #fff;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-      transition: background 0.3s;
-      background: #1e3c72;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
     }
-    .top-nav a:hover {
+    .menu a:last-child {
+      border-bottom: none;
+    }
+    .menu a:hover {
       background: #15315b;
     }
     header h1 {
-      margin: 10px 0 0;
-      font-size: 2rem;
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: center;
+      flex: 1;
     }
     .content {
       padding: 20px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="top-nav">
+    <!-- Hamburger батырмасы -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h1>Кенесары Қасымұлы</h1>
+    <!-- Бос орын (оң жақ) -->
+    <div style="width:30px;"></div>
+    <!-- Dropdown мәзірі -->
+    <nav class="menu" id="menu">
       <a href="ombai.html">Өмірбаяны</a>
       <a href="unlat.html">Ұлт-азаттық күресі</a>
       <a href="sayasi.html">Саяси мұрасы</a>
       <a href="askeri.html">Әскери данышпандығы</a>
       <a href="maden.html">Мәдени әсері</a>
-    </div>
-    <h1>Кенесары Қасымұлы</h1>
+    </nav>
   </header>
   
   <div class="content">
-    <!-- Мұнда сайттың негізгі мазмұны орналасады -->
     <h2>Негізгі бет мазмұны</h2>
     <p>Бұл жерде сайттың негізгі ақпараттық бөлімдері, суреттер мен визуалды элементтері көрсетіледі.</p>
   </div>
+  
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('menu');
+      // Мәзірді көрсету/жасыру
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    }
+  </script>
 </body>
 </html>
