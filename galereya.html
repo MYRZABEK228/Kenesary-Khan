@@ -3,83 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Бөлім атауы – Мысалы, Өмірбаяны</title>
+  <title>Кенесары Қасымұлы – Галерея</title>
   <style>
-    /* Жалпы стильдер */
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
       color: #333;
-      padding: 20px;
+      text-align: center;
     }
     header {
       background: #1e3c72;
-      color: #fff;
+      color: white;
       padding: 20px;
-      text-align: center;
     }
-    nav {
-      margin: 20px 0;
-      text-align: center;
+    .gallery-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 10px;
     }
-    nav a {
-      margin: 5px;
-      text-decoration: none;
-      color: #1e3c72;
-      font-weight: bold;
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
     }
-    .content {
-      max-width: 800px;
-      margin: auto;
-    }
-    /* Суреттер мен ақпарат блоктарына арналған стильдер */
-    .info-block {
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .info-block img {
-      max-width: 100%;
+    .gallery img {
+      width: 100%;
+      max-width: 280px;
       height: auto;
-      display: block;
-      margin-bottom: 10px;
+      border-radius: 8px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .image-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1e3c72;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #15315b;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Бөлім атауы – Мысалы, Өмірбаяны</h1>
+    <h1>Кенесары Қасымұлы</h1>
+    <p>Галерея</p>
   </header>
-  
-  <nav>
-    <a href="index.html">Негізгі бетке оралу</a>
-  </nav>
-  
-  <div class="content">
-    <!-- Мұнда бөлімге қатысты қысқаша таныстыру мәтінін орналастырыңыз -->
-    <div class="info-block">
-      <h2>Таныстыру</h2>
-      <!-- Мәтін енгізіңіз -->
-      <p>Мұнда бөлім туралы қысқаша ақпарат жазылады.</p>
+
+  <div class="gallery-container">
+    <div class="gallery">
+      <div class="image-box">
+        <img src="images/kenesary1.jpg" alt="Кенесары Қасымұлы">
+      </div>
+      <div class="image-box">
+        <img src="images/kenesary2.jpg" alt="Кенесары сарбаздары">
+      </div>
+      <div class="image-box">
+        <img src="images/kenesary3.jpg" alt="Кенесарының соғысы">
+      </div>
+      <div class="image-box">
+        <img src="images/kenesary4.jpg" alt="Кенесары ханның мөрі">
+      </div>
+      <div class="image-box">
+        <img src="images/kenesary5.jpg" alt="Кенесары ескерткіші">
+      </div>
     </div>
-    
-    <!-- Мұнда бөлімге қатысты суреттер мен қосымша ақпараттар үшін блоктар -->
-    <div class="info-block">
-      <h2>Сурет немесе Инфографика</h2>
-      <!-- Суреттің URL мекенжайын және суретке қатысты ақпаратты осында енгізіңіз -->
-      <img src="https://via.placeholder.com/600x400?text=Сурет" alt="Сурет атауы">
-      <p>Мұнда суретке қатысты түсініктеме жазылады.</p>
-    </div>
-    
-    <!-- Қосымша ақпараттар үшін блоктар -->
-    <div class="info-block">
-      <h2>Қосымша Ақпарат</h2>
-      <!-- Қосымша мәтін немесе медиа материалдар осында қойылады -->
-      <p>Мұнда бөлімге қатысты басқа мәліметтерді енгізіңіз.</p>
-    </div>
-    
   </div>
+
+  <div>
+    <a class="back-button" href="index.html">← Басты бетке оралу</a>
+  </div>
+
 </body>
 </html>
