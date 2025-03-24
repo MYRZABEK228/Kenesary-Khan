@@ -130,6 +130,75 @@
                 <input type="radio" name="q10" value="b"> Ашық шайқас<br>
                 <input type="radio" name="q10" value="c"> Дипломатиялық келісімдер<br>
             </div>
+            <div class="question">
+    <p>11. Кенесары ханның ең жақын серіктерінің бірі кім болды?</p>
+    <input type="radio" name="q11" value="a"> Сырым Датұлы<br>
+    <input type="radio" name="q11" value="b"> Наурызбай батыр<br>
+    <input type="radio" name="q11" value="c"> Әбілқайыр хан<br>
+</div>
+
+<div class="question">
+    <p>12. Кенесары Қасымұлы қандай халықпен соғысты?</p>
+    <input type="radio" name="q12" value="a"> Қытайлармен<br>
+    <input type="radio" name="q12" value="b"> Орыстармен<br>
+    <input type="radio" name="q12" value="c"> Қырғыздармен<br>
+</div>
+
+<div class="question">
+    <p>13. Кенесары ханның әскерінде қанша адам болған?</p>
+    <input type="radio" name="q13" value="a"> 10 000-нан аса<br>
+    <input type="radio" name="q13" value="b"> 5 000-ға жуық<br>
+    <input type="radio" name="q13" value="c"> 1 500-дей ғана<br>
+</div>
+
+<div class="question">
+    <p>14. Кенесары Қасымұлы қай елге елші жіберген?</p>
+    <input type="radio" name="q14" value="a"> Осман империясына<br>
+    <input type="radio" name="q14" value="b"> Англияға<br>
+    <input type="radio" name="q14" value="c"> Бұхара хандығына<br>
+</div>
+
+<div class="question">
+    <p>15. Кенесары көтерілісінен кейін қазақ жерінде не өзгерді?</p>
+    <input type="radio" name="q15" value="a"> Қазақ хандығы қайта құрылды<br>
+    <input type="radio" name="q15" value="b"> Қазақ жерлері Ресейге толық өтті<br>
+    <input type="radio" name="q15" value="c"> Қазақтар тәуелсіздігін алды<br>
+</div>
+
+<div class="question">
+    <p>16. Кенесарының әскери тактикасы қандай болды?</p>
+    <input type="radio" name="q16" value="a"> Қорғаныс стратегиясы<br>
+    <input type="radio" name="q16" value="b"> Шапқыншылық соғыстар<br>
+    <input type="radio" name="q16" value="c"> Көшпелі соғыс тактикасы<br>
+</div>
+
+<div class="question">
+    <p>17. Кенесары Қасымұлы қандай ұран көтерді?</p>
+    <input type="radio" name="q17" value="a"> Қазақ жерін сақтау<br>
+    <input type="radio" name="q17" value="b"> Ресеймен бейбіт келісім<br>
+    <input type="radio" name="q17" value="c"> Қазақтарды Қытайға көшіру<br>
+</div>
+
+<div class="question">
+    <p>18. Кенесарының көтерілісі не себепті сәтсіз аяқталды?</p>
+    <input type="radio" name="q18" value="a"> Орыс әскері күштірек болды<br>
+    <input type="radio" name="q18" value="b"> Қазақ руларының бірігуі болмады<br>
+    <input type="radio" name="q18" value="c"> Барлық жауап дұрыс<br>
+</div>
+
+<div class="question">
+    <p>19. Кенесары ханның әскери әрекеттері қайда шоғырланды?</p>
+    <input type="radio" name="q19" value="a"> Жетісу мен Сырдария бойында<br>
+    <input type="radio" name="q19" value="b"> Батыс Қазақстанда<br>
+    <input type="radio" name="q19" value="c"> Маңғыстау жерінде<br>
+</div>
+
+<div class="question">
+    <p>20. Кенесары ханның бас сүйегі қайда?</p>
+    <input type="radio" name="q20" value="a"> Санкт-Петербургтегі Эрмитажда<br>
+    <input type="radio" name="q20" value="b"> Мәскеуде<br>
+    <input type="radio" name="q20" value="c"> Белгісіз<br>
+</div>
 
             <!-- Осындай форматта 20 сұрақ жасауға болады -->
 
@@ -146,9 +215,11 @@
     <script>
         function checkAnswers() {
             let correctAnswers = {
-                q1: "b", q2: "b", q3: "b", q4: "a", q5: "b", 
-                q6: "b", q7: "a", q8: "a", q9: "b", q10: "a"
-            };
+    q1: "b", q2: "b", q3: "b", q4: "a", q5: "b", 
+    q6: "b", q7: "a", q8: "a", q9: "b", q10: "a",
+    q11: "b", q12: "c", q13: "a", q14: "c", q15: "b",
+    q16: "c", q17: "a", q18: "c", q19: "a", q20: "c"
+};
             let score = 0;
             for (let key in correctAnswers) {
                 let selected = document.querySelector(`input[name="${key}"]:checked`);
