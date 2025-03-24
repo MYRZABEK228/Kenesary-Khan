@@ -3,83 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Бөлім атауы – Мысалы, Өмірбаяны</title>
+  <title>Кенесары Қасымұлы – Интерактивті Бөлім</title>
   <style>
-    /* Жалпы стильдер */
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
       color: #333;
-      padding: 20px;
+      text-align: center;
     }
     header {
       background: #1e3c72;
-      color: #fff;
+      color: white;
       padding: 20px;
-      text-align: center;
     }
-    nav {
-      margin: 20px 0;
-      text-align: center;
-    }
-    nav a {
-      margin: 5px;
-      text-decoration: none;
-      color: #1e3c72;
-      font-weight: bold;
-    }
-    .content {
+    .container {
       max-width: 800px;
-      margin: auto;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
     }
-    /* Суреттер мен ақпарат блоктарына арналған стильдер */
-    .info-block {
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+    h1, h2 {
+      color: #1e3c72;
     }
-    .info-block img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .quiz {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .question {
+      font-size: 18px;
       margin-bottom: 10px;
+    }
+    .options {
+      list-style-type: none;
+      padding: 0;
+    }
+    .options li {
+      background: #e3e3e3;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .options li:hover {
+      background: #d1d1d1;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: green;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1e3c72;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .back-button:hover {
+      background: #15315b;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Бөлім атауы – Мысалы, Өмірбаяны</h1>
+    <h1>Кенесары Қасымұлы</h1>
+    <p>Интерактивті бөлім</p>
   </header>
-  
-  <nav>
-    <a href="index.html">Негізгі бетке оралу</a>
-  </nav>
-  
-  <div class="content">
-    <!-- Мұнда бөлімге қатысты қысқаша таныстыру мәтінін орналастырыңыз -->
-    <div class="info-block">
-      <h2>Таныстыру</h2>
-      <!-- Мәтін енгізіңіз -->
-      <p>Мұнда бөлім туралы қысқаша ақпарат жазылады.</p>
+
+  <div class="container">
+    <h2>Тест сұрақтары</h2>
+    <div class="quiz">
+      <div class="question">1. Кенесары Қасымұлы қай жылдары өмір сүрді?</div>
+      <ul class="options">
+        <li onclick="checkAnswer(this, false)">1723-1781</li>
+        <li onclick="checkAnswer(this, true)">1802-1847</li>
+        <li onclick="checkAnswer(this, false)">1850-1900</li>
+      </ul>
+
+      <div class="question">2. Кенесарының басты мақсаты қандай болды?</div>
+      <ul class="options">
+        <li onclick="checkAnswer(this, false)">Қоқан хандығын жаулау</li>
+        <li onclick="checkAnswer(this, true)">Қазақ хандығын қайта қалпына келтіру</li>
+        <li onclick="checkAnswer(this, false)">Ресеймен одақ құру</li>
+      </ul>
+
+      <div class="question">3. Кенесарының әскери тактикасы қандай болды?</div>
+      <ul class="options">
+        <li onclick="checkAnswer(this, false)">Жерді жаулап алу</li>
+        <li onclick="checkAnswer(this, false)">Тек қорғаныс жүргізу</li>
+        <li onclick="checkAnswer(this, true)">Көшпелі партизандық соғыс</li>
+      </ul>
     </div>
-    
-    <!-- Мұнда бөлімге қатысты суреттер мен қосымша ақпараттар үшін блоктар -->
-    <div class="info-block">
-      <h2>Сурет немесе Инфографика</h2>
-      <!-- Суреттің URL мекенжайын және суретке қатысты ақпаратты осында енгізіңіз -->
-      <img src="https://via.placeholder.com/600x400?text=Сурет" alt="Сурет атауы">
-      <p>Мұнда суретке қатысты түсініктеме жазылады.</p>
-    </div>
-    
-    <!-- Қосымша ақпараттар үшін блоктар -->
-    <div class="info-block">
-      <h2>Қосымша Ақпарат</h2>
-      <!-- Қосымша мәтін немесе медиа материалдар осында қойылады -->
-      <p>Мұнда бөлімге қатысты басқа мәліметтерді енгізіңіз.</p>
-    </div>
-    
+
+    <div id="result" class="result"></div>
   </div>
+
+  <div>
+    <a class="back-button" href="index.html">← Басты бетке оралу</a>
+  </div>
+
+  <script>
+    function checkAnswer(element, isCorrect) {
+      if (isCorrect) {
+        element.style.background = '#28a745';
+        document.getElementById('result').innerText = 'Дұрыс!';
+      } else {
+        element.style.background = '#dc3545';
+        document.getElementById('result').innerText = 'Қате. Қайталап көріңіз!';
+      }
+    }
+  </script>
+
 </body>
 </html>
