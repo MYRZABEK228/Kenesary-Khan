@@ -78,6 +78,17 @@
       padding: 10px;
       transition: transform 0.3s ease-in-out;
     }
+        .photoview__open:hover {
+      transform: scale(1.05); /* Эффект увеличения при наведении */
+      cursor: pointer;
+    }
+
+    .photoview__open img {
+      border-radius: 5px;
+      max-width: 100%; /* Ограничивает ширину до 100% родительского блока */
+      height: auto;
+      max-height: 500px; /* Ограничиваем максимальную высоту */
+    }
   </style>
 </head>
 <body>
